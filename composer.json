@@ -1,0 +1,54 @@
+{
+    "name": "allumina/playd_core",
+    "description": "Laravel Playd Core",
+    "keywords": [
+        "allumina",
+        "playd_core"
+    ],
+    "homepage": "https://github.com/allumina/playd_core",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Allumina",
+            "email": "dev@allumina.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Allumina\\PlaydCore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Allumina\\PlaydCore\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Allumina\\PlaydCore\\PlaydCoreServiceProvider"
+            ],
+            "aliases": {
+                "PlaydCore": "Allumina\\PlaydCore\\PlaydCoreFacade"
+            }
+        }
+    }
+}
